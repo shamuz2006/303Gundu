@@ -130,5 +130,12 @@ public class Autonomous {
           new DriveDistance(8 * 12, -1)
         )
     );
+    create(
+      "Drive 60 inches"
+      () ->
+        new SequentialCommandGroup(
+          new DriveMoreDistance(60.0, 1)
+        )
+    );
   }
 }

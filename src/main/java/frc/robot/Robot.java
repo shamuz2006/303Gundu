@@ -26,6 +26,7 @@ import frc.robot.commands.drive.DefaultDrive;
 import frc.robot.commands.drive.DriveHold;
 import frc.robot.commands.drive.DriveWait;
 import frc.robot.commands.drive.SetDriveSpeed;
+import frc.robot.commands.drive.DriveMoreDistance;
 import frc.robot.commands.led.LEDRainbowRotate;
 import frc.robot.commands.led.LEDSolidColor;
 import frc.robot.subsystems.ClimberSubsystem;
@@ -149,7 +150,7 @@ public class Robot extends TimedRobot {
 		new JoystickButton(rightJoystick, 2).whileHeld(new SetDriveSpeed(1));
 
 		// Drive fwd
-		new JoystickButton(rightJoystick, 3).whileHeld(new DriveHold(0.75));
+		new JoystickButton(rightJoystick, 3).whileHeld(new DriveMoreDistance(60.0, 1));
 		new JoystickButton(rightJoystick, 5).whileHeld(new DriveHold(1));
 
 		// Drive back
@@ -163,6 +164,7 @@ public class Robot extends TimedRobot {
 		// Rotation clockwise
 		new JoystickButton(leftJoystick, 6).whileHeld(new DriveHold(1, -1));
 		new JoystickButton(leftJoystick, 4).whileHeld(new DriveHold(0.75, -0.75));
+
 	}
 
 	/*
